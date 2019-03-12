@@ -1,6 +1,7 @@
 // const Joi = require('joi')
 const service = require('../services/scheduleTaskService')
 const asyncMiddleware = require('../middlewares/async')
+const constant = require('../constants/index')
 let scheduleTasks = {
   /**
    * @description This method get scheduled task by Id
@@ -13,9 +14,9 @@ let scheduleTasks = {
   getById: asyncMiddleware(async function (req, res) {
     let response = await service.getById(req.params.id)
     if (response === null) {
-      res.status(404).json({ message: 'Record Not Found' })
+      res.status(constant.HTTP_NOT_FOUND).json({ message: 'Record Not Found' })
     } else {
-      res.status(200).json(response)
+      res.status(constant.HTTP_SUCCESS).json(response)
     }
     return res
   }),
@@ -28,12 +29,11 @@ let scheduleTasks = {
    * @returns {object} JSON HTTP Status code
    */
   getAll: asyncMiddleware(async function (req, res, next) {
-    // res.status(404).send('Record Not Found').end()
     let response = await service.getAll()
     if (response === null) {
-      res.status(404).json('Record Not Found').end()
+      res.status(constant.HTTP_NOT_FOUND).json('Record Not Found').end()
     } else {
-      res.status(200).json(response).end()
+      res.status(constant.HTTP_SUCCESS).json(response).end()
     }
     return res
   }),
