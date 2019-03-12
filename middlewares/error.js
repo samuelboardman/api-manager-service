@@ -1,4 +1,5 @@
 const logger = require('../utils/errorManager')
+const constant = require('../constants/index')
 /**
  * @description handles all routes errors
  *
@@ -6,11 +7,10 @@ const logger = require('../utils/errorManager')
  * @param {string} req
  * @param {string} res
  *
- * @returns {Object}  JSON
  */
 module.exports = function (err, req, res) {
   if (err) {
     logger.error(err)
-    res.status(500).json({ message: 'Something Broke' })
+    res.status(constant.HTPP_INTERNAL_SERVER).json({ message: 'Something Broke' })
   }
 }
