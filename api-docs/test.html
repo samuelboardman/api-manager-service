@@ -1,0 +1,20 @@
+<html>
+<head>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+<script>
+$.ajax({
+  method: "GET",
+  url: "http://test.riby.ng:5000/api/v1/cooperative",
+  headers: { Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJvbGFudG9iaSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSIsImFkbWluIl0sImV4cCI6MTUxMjIzOTc2NCwidXNlciI6eyJ1c2VybmFtZSI6Im9sYW50b2JpIiwiZW1haWwiOiJvbGFudG9iaUBnbWFpbC5jb20iLCJtb2JpbGVOdW1iZXIiOiIwODAyNDAzNTAzNyIsImZpcnN0TmFtZSI6IlRvYmkiLCJsYXN0TmFtZSI6Ik9sYW5yZXdhanUiLCJyb2xlTmFtZSI6IlJPTEVfU1VQRVJBRE1JTiIsImNvb3BlcmF0aXZlSWQiOm51bGx9LCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSQURNSU4iXSwianRpIjoiOGVkZDAwOTMtMDEwNy00NjFiLTgyMTUtYjNhNjk5NGQxNjUyIiwiY2xpZW50X2lkIjoiYW5kcm9pZC1jbGllbnQifQ.xHBz_IKd6SebDETWYAYjTj7J3CaYYp3GGDgCG9Vqa_w"}
+})
+  .done(function( msg ) {
+    console.log(JSON.stringify(msg) );
+  });
+</script>
+</body>
+</html>

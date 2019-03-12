@@ -1,0 +1,37 @@
+{  
+    "datasource_url":"datasource_url",
+    "sso":{
+         "publicKeyURL":"racs_sso_public_key_url",
+         "baseIdentityURL":"racs_base_identity_url",
+         "apiUsername":"racs_sso_api_username",
+         "apiPassword":"racs_api_password",
+         "clientId": "racs_client_id",
+         "clientSecret": "racs_client_secret"
+     },
+
+     "mongodb":{
+         "host":"racs_db_host",
+         "username":"racs_db_username",
+         "password":"racs_db_password",
+         "port":"racs_db_port",
+         "databaseName":"racs_db_name"
+     },
+     "server":{
+         "port":"racs_port"
+
+     },
+     "rabbitParams": { 
+            "protocol": "rmq_protocol",
+            "hostname": "rmq_host_name",
+            "port": "rmq_port",
+            "username": "rmq_username",
+            "password": "rmq_password",
+            "locale": "rmq_local",
+            "frameMax": "frameMax",
+            "heartbeat": "heartbeat"
+        }
+    
+    
+
+
+ }

@@ -1,0 +1,7 @@
+{
+    "name":"RACS Transactions Jobs Application -Staging",
+    "mail":{
+        "host":"dev-mail-servier"
+        
+    }
+}

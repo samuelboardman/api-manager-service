@@ -1,0 +1,22 @@
+const express = require('express')
+const error = require('../middlewares/error')
+const helmet = require('helmet')
+const morgan = require('morgan')
+const bodyParser = require('body-parser')
+const scheduleTasksRoute = require('../routes/scheduleTasksRoutes')
+const scheduleTasksLogTypeRoute = require('../routes/scheduleTasksLogTypeRoutes')
+const scheduleTasksLogStatusRoute = require('../routes/scheduleTasksLogStatusRoutes')
+const scheduleTasksLogRoute = require('../routes/scheduleTasksLogRoutes')
+
+module.exports = function (app) {
+  app.use(helmet())
+  app.use(morgan('combined'))
+  app.use('/v1/api/scheduleTasksLogTypes', scheduleTasksLogTypeRoute)
+  app.use('/v1/api/scheduleTasksLogStatuses', scheduleTasksLogStatusRoute)
+  app.use('/v1/api/scheduleTasksLogs', scheduleTasksLogRoute)
+  app.use('/v1/api/scheduleTasks', scheduleTasksRoute)
+  app.use(bodyParser.json())
+  app.use(error)
+  app.use(express.json())
+  app.use(express.urlencoded({ extended: true }))
+}
