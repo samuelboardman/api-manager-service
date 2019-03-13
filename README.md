@@ -1,7 +1,7 @@
 # api-manager-service
 
 This is an open source project that manages JSON and XML API Pull and Push Requests.
-The service automates API Pull requests and push to RabbitMQ for the user to consume
+The service automates API Pull requests and push to RabbitMQ for the user to consume. 
 It is built on a Micro-Service Architecture
 
 Note:
