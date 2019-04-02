@@ -1,7 +1,5 @@
-const mongoose = require('../config/integrations/mongodbconfig')
-const schema = require('../models/scheduler/scheduleTaskLog')
+const ScheduleTaskLog = require('../models/scheduler/scheduleTaskLog')
 const logger = require('../utils/errorManager')
-const ScheduleTaskLog = mongoose.model('ScheduleTaskLog', schema)
 class ScheduleTaskLogRepo {
   /**
  * @description get scheduled tasks log by id

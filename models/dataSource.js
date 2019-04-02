@@ -25,4 +25,4 @@ const dataSourceSchema = new mongoose.Schema({
   locale: String
 })
 
-module.exports = dataSourceSchema
+module.exports = mongoose.model('DataSource', dataSourceSchema)

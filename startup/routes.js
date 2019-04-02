@@ -7,6 +7,7 @@ const scheduleTasksRoute = require('../routes/scheduleTasksRoutes')
 const scheduleTasksLogTypeRoute = require('../routes/scheduleTasksLogTypeRoutes')
 const scheduleTasksLogStatusRoute = require('../routes/scheduleTasksLogStatusRoutes')
 const scheduleTasksLogRoute = require('../routes/scheduleTasksLogRoutes')
+const authRoute = require('../routes/authRoutes')
 
 module.exports = function (app) {
   app.use(helmet())
@@ -15,7 +16,9 @@ module.exports = function (app) {
   app.use('/v1/api/scheduleTasksLogStatuses', scheduleTasksLogStatusRoute)
   app.use('/v1/api/scheduleTasksLogs', scheduleTasksLogRoute)
   app.use('/v1/api/scheduleTasks', scheduleTasksRoute)
+  app.use('/v1/api/authInfo', authRoute)
   app.use(bodyParser.json())
+  app.use(bodyParser.urlencoded({ extended: true }))
   app.use(error)
   app.use(express.json())
   app.use(express.urlencoded({ extended: true }))

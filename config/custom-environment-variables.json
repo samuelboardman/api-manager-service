@@ -29,7 +29,8 @@
             "locale": "rmq_local",
             "frameMax": "frameMax",
             "heartbeat": "heartbeat"
-        }
+        },
+        "secret":"dataSource_private_key"
     
     
 

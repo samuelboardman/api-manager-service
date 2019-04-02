@@ -1,6 +1,4 @@
-const mongoose = require('../config/integrations/mongodbconfig')
-const schema = require('../models/dataSource')
-const DataSource = mongoose.model('DataSource', schema)
+const DataSource = require('../models/dataSource')
 const logger = require('../utils/errorManager')
 class DataSourceRepo {
   async findById (id) {

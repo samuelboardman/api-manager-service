@@ -1,6 +1,4 @@
-const schema = require('../models/scheduler/scheduleTaskLogStatus')
-const mongoose = require('../config/integrations/mongodbconfig')
-const ScheduleTaskLogStatus = mongoose.model('ScheduleTaskLogStatus', schema)
+const ScheduleTaskLogStatus = require('../models/scheduler/scheduleTaskLogStatus')
 const logger = require('../utils/errorManager')
 class ScheduleTaskLogStatusRepo {
   async findById (id) {
