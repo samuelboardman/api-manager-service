@@ -1,7 +1,8 @@
 # api-pull-manager-service
 
-This is an open source project that manages JSON and XML API Pull and Push Requests.
-The service automates API Pull requests and push to an AMQP (RabbitMQ/KAFKA) for the user to consume. 
+This is Data puller as a service, 
+An open source project that propose to manage JSON, XML, File API Pull and Push Requests.
+The service automates API Pull requests and push to an AMQP (RabbitMQ/KAFKA) for the user/client service to consume. 
 
 Note:
 This project is still ongoing..
