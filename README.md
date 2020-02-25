@@ -11,4 +11,4 @@ Not Implemented yet:
 3. Majority of Test Cases 
  
 
-5. Initaited by Samuel BoardMan
+5. Initaited by Samuel Anjorin
